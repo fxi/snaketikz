@@ -1,0 +1,79 @@
+%	
+%	----------------------------------------------------------------------------
+%	"THE BEER-WARE LICENSE" (Revision 42):
+%	<f@fxi.io> wrote this file. As long as you retain this notice you
+%	can do whatever you want with this stuff. If we meet some day, and you think
+%	this stuff is worth it, you can buy me a beer in return. 
+%	----------------------------------------------------------------------------
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{snake}
+\usepackage{verbatim}
+\usepackage{url}
+
+
+\title{snakeTi\textit{k}Z \\ {\small v.0.1}}
+\author{Frédéric Moser \\ \url{f@fxi.io}}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Description}
+snakeTi\textit{k}Z is a simple \LaTeX package using Ti\textit{k}Z for drawing a path from the end of a line to the next one. It could be used in study of latin poetry.
+
+
+\section{Output exemple}
+Examples with different interlines height :
+
+\begin{snake}{0.9\textwidth}{4mm}
+\snL{s}{770}{membra natant sanie, surae fluxere, sine ullo}
+\snL{s}{771}{tegmine poples erat, femorum quoque musculus omnis}
+\snL{e}{772}{liquitur, et nigra destillant inguina tabe.}
+\end{snake}
+
+\begin{snake}{0.9\textwidth}{5mm}
+\snL{s}{773}{dissiluit stringens uterum membrana, fluuntque}
+\snL{s}{774}{uiscera; nec, quantus toto de corpore debet,}
+\snL{s}{775}{effluit in terras, saeuum sed membra uenenum}
+\snL{e}{776}{decoquit, in minimum mors contrahit omnia uirus.}
+\end{snake}
+
+\begin{snake}{0.9\textwidth}{6mm}
+\snL{s}{811}{sanguis erant lacrimae; quaecumque foramina nouit}
+\snL{s}{812}{umor, ab his largus manat cruor; ora redundant}
+\snL{s}{813}{et patulae nares; sudor rubet; omnia plenis}
+\snL{e}{814}{membra fluunt uenis; totum est pro uolnere corpus.}
+\end{snake}
+
+
+
+
+\section{Installation}
+\begin{itemize}
+\item Copy \texttt{snaketikz.sty} in your working directory, or copy source code in a new \texttt{snaketikz.sty} file.
+\item load snake package \verb|\usepackage{sneaktikz}|
+\end{itemize}
+
+
+\section{Minimal working exemple}
+\begin{verbatim}
+
+\documentclass{article}\usepackage{snaketikz}
+
+\begin{document}% begin snake environnment with 2 arguments :% width and interline height\begin{snake}{0.9\textwidth}{4mm}% the snL command take 3 arguments:% 1 : type of line. s=snake e=end% 2 : line number% 3 : verse line\snL{s}{770}{membra natant sanie, surae fluxere, sine ullo}\snL{s}{771}{tegmine poples erat, femorum quoque musculus omnis}\snL{e}{772}{liquitur, et nigra destillant inguina tabe.}\end{snake}
+\end{document}
+
+\end{verbatim}
+\section{Snake package source}
+
+\verbatiminput{snaketikz.sty}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
